@@ -10,5 +10,6 @@ urlpatterns = [
     path('professores/', ProfessorListCreateView.as_view(), name='professor-list-create'),
     path('professores/<int:pk>/', ProfessorRetrieveUpdateDestroyView.as_view(), name='professor-detail'),
     path('turmas/', TurmaListCreateView.as_view(), name='turma-list-create'),
+    path('turmas/<int:pk>/', TurmaRetrieveUpdateDestroyView.as_view(), name='turma-detail'),
 ]
 
