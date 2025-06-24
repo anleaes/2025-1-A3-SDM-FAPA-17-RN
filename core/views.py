@@ -1,8 +1,6 @@
 from rest_framework import generics
-from .models import Aluno
-from .serializers import AlunoSerializer
-from .models import Professor
-from .serializers import ProfessorSerializer
+from .models import Aluno, Professor, Turma
+from .serializers import AlunoSerializer, ProfessorSerializer, TurmaSerializer
 
 
 class AlunoListCreateView(generics.ListCreateAPIView):
@@ -21,3 +19,7 @@ class ProfessorListCreateView(generics.ListCreateAPIView):
 class ProfessorRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Professor.objects.all().order_by('nome')
     serializer_class = ProfessorSerializer
+
+class TurmaListCreateView(generics.ListCreateAPIView):
+    queryset = Turma.objects.all()
+    serializer_class = TurmaSerializer
