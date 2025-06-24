@@ -21,9 +21,9 @@ class ProfessorRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = ProfessorSerializer
 
 class TurmaListCreateView(generics.ListCreateAPIView):
-    queryset = Turma.objects.all()
+    queryset = Turma.objects.all().order_by('ano', 'nome')
     serializer_class = TurmaSerializer
 
 class TurmaRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
-    queryset = Turma.objects.all()
+    queryset = Turma.objects.all().order_by('ano', 'nome')
     serializer_class = TurmaSerializer
