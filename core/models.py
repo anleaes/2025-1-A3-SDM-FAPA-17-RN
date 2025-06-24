@@ -13,6 +13,10 @@ class Aluno(models.Model):
 class Professor(models.Model):
     nome = models.CharField(max_length=100)
     especialidade = models.CharField(max_length=100)
+    email = models.EmailField(unique=True)
+    telefone = models.CharField(max_length=15, blank=True)
+    ativo = models.BooleanField(default=True)
 
     def __str__(self):
         return self.nome
+
