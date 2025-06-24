@@ -4,6 +4,8 @@ from .models import Professor
 from .models import Turma
 
 class AlunoSerializer(serializers.ModelSerializer):
+    professor = serializers.StringRelatedField()
+
     class Meta:
         model = Aluno
         fields = '__all__'
