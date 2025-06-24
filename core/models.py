@@ -10,3 +10,9 @@ class Aluno(models.Model):
     def __str__(self):
         return self.nome
 
+class Professor(models.Model):
+    nome = models.CharField(max_length=100)
+    especialidade = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.nome
