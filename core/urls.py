@@ -1,6 +1,6 @@
 from django.urls import path, include
 from django.contrib import admin
-from .views import AlunoListCreateView, AlunoRetrieveUpdateDestroyView, ProfessorListCreateView, ProfessorRetrieveUpdateDestroyView
+from .views import AlunoListCreateView, AlunoRetrieveUpdateDestroyView, ProfessorListCreateView, ProfessorRetrieveUpdateDestroyView, TurmaListCreateView, TurmaRetrieveUpdateDestroyView
 
 urlpatterns = [
     path('alunos/', AlunoListCreateView.as_view(), name='aluno-list-create'),
@@ -9,5 +9,6 @@ urlpatterns = [
     path('api/', include('core.urls')),
     path('professores/', ProfessorListCreateView.as_view(), name='professor-list-create'),
     path('professores/<int:pk>/', ProfessorRetrieveUpdateDestroyView.as_view(), name='professor-detail'),
+    path('turmas/', TurmaListCreateView.as_view(), name='turma-list-create'),
 ]
 
