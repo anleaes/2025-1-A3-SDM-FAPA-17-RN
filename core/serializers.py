@@ -22,3 +22,8 @@ class TurmaSerializer(serializers.ModelSerializer):
         model = Turma
         fields = '__all__'
         read_only_fields = ['id']
+
+
+#name = 'core'
+#version = 'v1'
+# This file contains serializers for the core application models.
