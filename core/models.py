@@ -12,13 +12,14 @@ class Aluno(models.Model):
 
 class Professor(models.Model):
     nome = models.CharField(max_length=100)
-    especialidade = models.CharField(max_length=100)
+    cpf = models.CharField(max_length=14, unique=True)
     email = models.EmailField(unique=True)
-    telefone = models.CharField(max_length=15, blank=True)
-    ativo = models.BooleanField(default=True)
+    formacao = models.CharField(max_length=100)
+    area_atuacao = models.CharField(max_length=100)
 
     def __str__(self):
         return self.nome
+
 
 class Turma(models.Model):
     nome = models.CharField(max_length=50)
