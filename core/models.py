@@ -20,3 +20,12 @@ class Professor(models.Model):
     def __str__(self):
         return self.nome
 
+class Turma(models.Model):
+    nome = models.CharField(max_length=50)
+    ano = models.IntegerField()
+    professor = models.ForeignKey('Professor', on_delete=models.CASCADE, related_name='turmas')
+
+
+    def __str__(self):
+        return f"{self.nome} - {self.ano}"
+
