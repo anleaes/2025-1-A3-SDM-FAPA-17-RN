@@ -5,3 +5,4 @@ class AlunoSerializer(serializers.ModelSerializer):
     class Meta:
         model = Aluno
         fields = '__all__'
+        read_only_fields = ('id',)  
