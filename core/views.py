@@ -17,3 +17,7 @@ class AlunoRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
 class ProfessorListCreateView(generics.ListCreateAPIView):
     queryset = Professor.objects.all()
     serializer_class = ProfessorSerializer
+
+class ProfessorRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Professor.objects.all()
+    serializer_class = ProfessorSerializer
