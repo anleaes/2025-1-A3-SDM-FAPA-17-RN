@@ -47,6 +47,8 @@ class Nota(models.Model):
     data_lancamento = models.DateField()
     observacao = models.CharField(max_length=255, blank=True)  # novo atributo
     aluno = models.ForeignKey('Aluno', on_delete=models.CASCADE, related_name='notas')
+    disciplina = models.ForeignKey('Disciplina', on_delete=models.CASCADE, related_name='notas')
+
 
     def __str__(self):
         return f"{self.valor} - {self.aluno.nome}"
