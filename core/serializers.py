@@ -8,6 +8,7 @@ from .models import (
     Frequencia,
     CarrinhoMatricula,
     Perfil,
+    Usuario,
 )
 
 
