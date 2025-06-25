@@ -39,3 +39,7 @@ class DisciplinaRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView)
 class NotaListCreateView(generics.ListCreateAPIView):
     queryset = Nota.objects.all().order_by('data_lancamento')
     serializer_class = NotaSerializer
+
+class NotaRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Nota.objects.all().order_by('data_lancamento')
+    serializer_class = NotaSerializer
