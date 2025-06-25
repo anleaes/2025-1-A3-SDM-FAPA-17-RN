@@ -7,6 +7,7 @@ from .models import (
     Frequencia,
     Nota,
     CarrinhoMatricula,
+    Perfil,
 )
 from .serializers import (
     AlunoSerializer,
@@ -16,6 +17,7 @@ from .serializers import (
     NotaSerializer,
     FrequenciaSerializer,
     CarrinhoMatriculaSerializer,
+    PerfilSerializer,
 )
 
 
