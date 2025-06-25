@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Disciplina, Aluno, Professor, Turma, Disciplina 
+from .models import Aluno, Professor, Turma, Disciplina 
 
 
 class AlunoSerializer(serializers.ModelSerializer):
