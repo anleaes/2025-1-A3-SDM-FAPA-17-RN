@@ -20,6 +20,14 @@ class Professor(models.Model):
     def __str__(self):
         return self.nome
 
+class Disciplina(models.Model):
+    nome = models.CharField(max_length=100)
+    carga_horaria = models.PositiveIntegerField()
+    turma = models.ForeignKey('Turma', on_delete=models.CASCADE, related_name='disciplinas')
+    professor = models.ForeignKey('Professor', on_delete=models.CASCADE, related_name='disciplinas')
+
+    def __str__(self):
+        return self.nome
 
 class Turma(models.Model):
     nome = models.CharField(max_length=50)
@@ -34,12 +42,4 @@ class Turma(models.Model):
     def __str__(self):
         return f"{self.nome} - {self.ano} - {self.periodo}"
 
-class Disciplina(models.Model):
-    nome = models.CharField(max_length=100)
-    carga_horaria = models.PositiveIntegerField()
-    turma = models.ForeignKey('Turma', on_delete=models.CASCADE, related_name='disciplinas')
-    professor = models.ForeignKey('Professor', on_delete=models.CASCADE, related_name='disciplinas')
-
-    def __str__(self):
-        return self.nome
 
