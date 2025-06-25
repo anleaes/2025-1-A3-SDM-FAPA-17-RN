@@ -11,6 +11,8 @@ from .views import (
     DisciplinaRetrieveUpdateDestroyView,
     NotaListCreateView,
     NotaRetrieveUpdateDestroyView,
+    FrequenciaListCreateView,
+    FrequenciaRetrieveUpdateDestroyView,
 )
 
 
