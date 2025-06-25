@@ -20,7 +20,6 @@ class Professor(models.Model):
     def __str__(self):
         return self.nome
 
-
 class Turma(models.Model):
     nome = models.CharField(max_length=50)
     ano = models.IntegerField()
@@ -42,4 +41,5 @@ class Disciplina(models.Model):
 
     def __str__(self):
         return self.nome
+
 
