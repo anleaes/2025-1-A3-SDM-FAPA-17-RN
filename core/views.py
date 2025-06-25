@@ -6,6 +6,7 @@ from .models import (
     Disciplina,
     Frequencia,
     Nota,
+    CarrinhoMatricula,
 )
 from .serializers import (
     AlunoSerializer,
@@ -14,6 +15,7 @@ from .serializers import (
     DisciplinaSerializer,
     NotaSerializer,
     FrequenciaSerializer,
+    CarrinhoMatriculaSerializer,
 )
 
 
@@ -65,3 +67,11 @@ class FrequenciaListCreateView(generics.ListCreateAPIView):
 class FrequenciaRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Frequencia.objects.all().order_by('data')
     serializer_class = FrequenciaSerializer
+
+class CarrinhoMatriculaListCreateView(generics.ListCreateAPIView):
+    queryset = CarrinhoMatricula.objects.all().order_by('-data_criacao')
+    serializer_class = CarrinhoMatriculaSerializer
+
+class CarrinhoMatriculaRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = CarrinhoMatricula.objects.all().order_by('-data_criacao')
+    serializer_class = CarrinhoMatriculaSerializer
