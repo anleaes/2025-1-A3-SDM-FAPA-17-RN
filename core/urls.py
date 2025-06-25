@@ -37,5 +37,7 @@ urlpatterns = [
     path('frequencias/<int:pk>/', FrequenciaRetrieveUpdateDestroyView.as_view(), name='frequencia-detail'),
     path('carrinhos/', CarrinhoMatriculaListCreateView.as_view(), name='carrinho-list-create'),
     path('carrinhos/<int:pk>/', CarrinhoMatriculaRetrieveUpdateDestroyView.as_view(), name='carrinho-detail'),
+    path('perfis/', PerfilListCreateView.as_view(), name='perfil-list-create'),
+    path('perfis/<int:pk>/', PerfilRetrieveUpdateDestroyView.as_view(), name='perfil-detail'),
 ]
 
