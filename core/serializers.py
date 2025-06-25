@@ -63,3 +63,8 @@ class CarrinhoMatriculaSerializer(serializers.ModelSerializer):
         model = CarrinhoMatricula
         fields = '__all__'
         read_only_fields = ('id',)
+
+class PerfilSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Perfil
+        fields = '__all__'
