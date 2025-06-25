@@ -6,6 +6,7 @@ from .models import (
     Disciplina,
     Frequencia,
     Nota,
+    CarrinhoMatricula,
 )
 from .serializers import (
     AlunoSerializer,
@@ -14,6 +15,7 @@ from .serializers import (
     DisciplinaSerializer,
     NotaSerializer,
     FrequenciaSerializer,
+    CarrinhoMatriculaSerializer,
 )
 
 
