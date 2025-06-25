@@ -8,6 +8,7 @@ from .models import (
     Frequencia,
     CarrinhoMatricula,
     Perfil,
+    Usuario,
 )
 
 
@@ -67,4 +68,9 @@ class CarrinhoMatriculaSerializer(serializers.ModelSerializer):
 class PerfilSerializer(serializers.ModelSerializer):
     class Meta:
         model = Perfil
+        fields = '__all__'
+
+class UsuarioSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Usuario
         fields = '__all__'
