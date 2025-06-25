@@ -83,3 +83,13 @@ class Perfil(models.Model):
 
     def __str__(self):
         return self.nome
+
+
+class Usuario(models.Model):
+    login = models.CharField(max_length=50, unique=True)
+    senha = models.CharField(max_length=100)
+    email = models.EmailField(unique=True)
+    perfil = models.ForeignKey('Perfil', on_delete=models.CASCADE, related_name='usuarios')
+
+    def __str__(self):
+        return self.login
