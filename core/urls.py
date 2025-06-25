@@ -13,6 +13,8 @@ from .views import (
     NotaRetrieveUpdateDestroyView,
     FrequenciaListCreateView,
     FrequenciaRetrieveUpdateDestroyView,
+    CarrinhoMatriculaListCreateView,
+    CarrinhoMatriculaRetrieveUpdateDestroyView,
 )
 
 
