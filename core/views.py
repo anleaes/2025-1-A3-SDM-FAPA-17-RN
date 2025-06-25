@@ -67,3 +67,7 @@ class FrequenciaListCreateView(generics.ListCreateAPIView):
 class FrequenciaRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Frequencia.objects.all().order_by('data')
     serializer_class = FrequenciaSerializer
+
+class CarrinhoMatriculaListCreateView(generics.ListCreateAPIView):
+    queryset = CarrinhoMatricula.objects.all().order_by('-data_criacao')
+    serializer_class = CarrinhoMatriculaSerializer
