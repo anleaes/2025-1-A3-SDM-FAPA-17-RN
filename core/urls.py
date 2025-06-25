@@ -15,6 +15,8 @@ from .views import (
     FrequenciaRetrieveUpdateDestroyView,
     CarrinhoMatriculaListCreateView,
     CarrinhoMatriculaRetrieveUpdateDestroyView,
+    PerfilListCreateView,
+    PerfilRetrieveUpdateDestroyView,
 )
 
 
