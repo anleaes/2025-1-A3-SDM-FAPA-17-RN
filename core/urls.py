@@ -8,7 +8,9 @@ from .views import (
     TurmaListCreateView,
     TurmaRetrieveUpdateDestroyView,
     DisciplinaListCreateView,
-    DisciplinaRetrieveUpdateDestroyView
+    DisciplinaRetrieveUpdateDestroyView,
+    NotaListCreateView,
+    NotaRetrieveUpdateDestroyView,
 )
 
 
