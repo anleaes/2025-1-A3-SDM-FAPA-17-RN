@@ -29,5 +29,7 @@ urlpatterns = [
     path('disciplinas/<int:pk>/', DisciplinaRetrieveUpdateDestroyView.as_view(), name='disciplina-detail'),
     path('notas/', NotaListCreateView.as_view(), name='nota-list-create'),
     path('notas/<int:pk>/', NotaRetrieveUpdateDestroyView.as_view(), name='nota-detail'),
+    path('frequencias/', FrequenciaListCreateView.as_view(), name='frequencia-list-create'),
+    path('frequencias/<int:pk>/', FrequenciaRetrieveUpdateDestroyView.as_view(), name='frequencia-detail'),
 ]
 
