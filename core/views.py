@@ -1,6 +1,20 @@
 from rest_framework import generics
-from .models import Aluno, Professor, Turma, Disciplina, Nota
-from .serializers import AlunoSerializer, ProfessorSerializer, TurmaSerializer, DisciplinaSerializer, NotaSerializer
+from .models import (  
+    Aluno, 
+    Professor,
+    Turma,
+    Disciplina,
+    Frequencia,
+    Nota,
+)
+from .serializers import (
+    AlunoSerializer,
+    ProfessorSerializer,
+    TurmaSerializer,
+    DisciplinaSerializer,
+    NotaSerializer,
+    FrequenciaSerializer,
+)
 
 
 class AlunoListCreateView(generics.ListCreateAPIView):
