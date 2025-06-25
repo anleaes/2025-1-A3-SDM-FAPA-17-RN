@@ -62,7 +62,15 @@ class Frequencia(models.Model):
     data = models.DateField()
     justificativa = models.TextField(blank=True)
     aluno = models.ForeignKey('Aluno', on_delete=models.CASCADE, related_name='frequencias')
-    disciplina = models.ForeignKey('Disciplina', on_delete=models.CASCADE, related_name='frequencias')  # NOVO
+    disciplina = models.ForeignKey(
+    'Disciplina',
+    on_delete=models.CASCADE,
+    related_name='frequencias',
+    null=True,  
+    blank=True  
+)
+
+  
 
     def __str__(self):
         return f"{self.aluno.nome} - {self.status} em {self.data}"
