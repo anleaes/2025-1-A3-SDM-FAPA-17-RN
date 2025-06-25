@@ -87,3 +87,11 @@ class PerfilListCreateView(generics.ListCreateAPIView):
 class PerfilRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Perfil.objects.all().order_by('nome')
     serializer_class = PerfilSerializer
+
+class UsuarioListCreateView(generics.ListCreateAPIView):
+    queryset = Usuario.objects.all().order_by('login')
+    serializer_class = UsuarioSerializer
+
+class UsuarioRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Usuario.objects.all().order_by('login')
+    serializer_class = UsuarioSerializer
