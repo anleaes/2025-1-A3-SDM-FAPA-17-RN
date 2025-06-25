@@ -7,6 +7,7 @@ from .models import (
     Nota,
     Frequencia,
     CarrinhoMatricula,
+    Perfil,
 )
 
 
