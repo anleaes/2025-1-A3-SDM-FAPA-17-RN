@@ -1,7 +1,6 @@
 from rest_framework import serializers
-from .models import Aluno
-from .models import Professor
-from .models import Turma
+from .models import Aluno, Professor, Turma, Disciplina 
+
 
 class AlunoSerializer(serializers.ModelSerializer):
     class Meta:
@@ -21,5 +20,15 @@ class TurmaSerializer(serializers.ModelSerializer):
         model = Turma
         fields = '__all__'
         read_only_fields = ['id']
+
+class DisciplinaSerializer(serializers.ModelSerializer):
+    professor = serializers.StringRelatedField()
+    turma = serializers.StringRelatedField()
+
+    class Meta:
+        model = Disciplina
+        fields = '__all__'
+        read_only_fields = ('id',)
+
 
 
