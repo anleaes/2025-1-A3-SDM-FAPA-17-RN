@@ -14,6 +14,13 @@ class ProfessorSerializer(serializers.ModelSerializer):
         fields = '__all__'
         read_only_fields = ('id',)
 
+class NotaSerializer(serializers.ModelSerializer):
+    aluno = serializers.StringRelatedField()
+
+    class Meta:
+        model = Nota
+        fields = '__all__'
+        read_only_fields = ('id',)
 
 class TurmaSerializer(serializers.ModelSerializer):
     class Meta:
@@ -30,11 +37,5 @@ class DisciplinaSerializer(serializers.ModelSerializer):
         fields = '__all__'
         read_only_fields = ('id',)
 
-class NotaSerializer(serializers.ModelSerializer):
-    aluno = serializers.StringRelatedField()
 
-    class Meta:
-        model = Nota
-        fields = '__all__'
-        read_only_fields = ('id',)
 
