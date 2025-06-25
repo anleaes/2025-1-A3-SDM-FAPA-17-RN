@@ -51,3 +51,17 @@ class Nota(models.Model):
     def __str__(self):
         return f"{self.valor} - {self.aluno.nome}"
 
+class Frequencia(models.Model):
+    STATUS_CHOICES = [
+        ('Presente', 'Presente'),
+        ('Faltou', 'Faltou'),
+        ('Justificada', 'Justificada'),
+    ]
+
+    status = models.CharField(max_length=20, choices=STATUS_CHOICES, default='Presente')
+    data = models.DateField()
+    justificativa = models.TextField(blank=True)
+    aluno = models.ForeignKey('Aluno', on_delete=models.CASCADE, related_name='frequencias')
+
+    def __str__(self):
+        return f"{self.aluno.nome} - {self.status} em {self.data}"
