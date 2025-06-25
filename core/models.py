@@ -71,6 +71,7 @@ class Frequencia(models.Model):
     null=True,  
     blank=True  
 )
+
     def __str__(self):
         return f"{self.aluno.nome} - {self.status} em {self.data}"
 
