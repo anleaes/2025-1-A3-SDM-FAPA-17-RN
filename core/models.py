@@ -64,34 +64,13 @@ class Frequencia(models.Model):
     data = models.DateField()
     justificativa = models.TextField(blank=True)
     aluno = models.ForeignKey('Aluno', on_delete=models.CASCADE, related_name='frequencias')
-
+    disciplina = models.ForeignKey(
+    'Disciplina',
+    on_delete=models.CASCADE,
+    related_name='frequencias',
+    null=True,  
+    blank=True  
+)
     def __str__(self):
         return f"{self.aluno.nome} - {self.status} em {self.data}"
 
-class CarrinhoMatricula(models.Model):
-    status = models.CharField(max_length=30)
-    data_criacao = models.DateField(auto_now_add=True)
-    ativo = models.BooleanField(default=True)
-    aluno = models.ForeignKey('Aluno', on_delete=models.CASCADE, related_name='carrinhos')
-
-    def __str__(self):
-        return f"Carrinho de {self.aluno.nome} - Status: {self.status}"
-
-class Perfil(models.Model):
-    nome = models.CharField(max_length=50)
-    descricao = models.CharField(max_length=100)
-    ativo = models.BooleanField(default=True)
-    criado_em = models.DateTimeField(auto_now_add=True)
-
-    def __str__(self):
-        return self.nome
-
-
-class Usuario(models.Model):
-    login = models.CharField(max_length=50, unique=True)
-    senha = models.CharField(max_length=100)
-    email = models.EmailField(unique=True)
-    perfil = models.ForeignKey('Perfil', on_delete=models.CASCADE, related_name='usuarios')
-
-    def __str__(self):
-        return self.login
