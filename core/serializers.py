@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Aluno, Professor, Turma, Disciplina, Nota
+from .models import Aluno, Professor, Turma, Disciplina, Nota, Frequencia
 
 
 class AlunoSerializer(serializers.ModelSerializer):
@@ -38,4 +38,11 @@ class DisciplinaSerializer(serializers.ModelSerializer):
         read_only_fields = ('id',)
 
 
+class FrequenciaSerializer(serializers.ModelSerializer):
+    aluno = serializers.StringRelatedField()
+
+    class Meta:
+        model = Frequencia
+        fields = '__all__'
+        read_only_fields = ('id',)
 
