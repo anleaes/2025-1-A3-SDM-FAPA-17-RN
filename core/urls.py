@@ -41,5 +41,7 @@ urlpatterns = [
     path('carrinhos/<int:pk>/', CarrinhoMatriculaRetrieveUpdateDestroyView.as_view(), name='carrinho-detail'),
     path('perfis/', PerfilListCreateView.as_view(), name='perfil-list-create'),
     path('perfis/<int:pk>/', PerfilRetrieveUpdateDestroyView.as_view(), name='perfil-detail'),
+    path('usuarios/', UsuarioListCreateView.as_view(), name='usuario-list-create'),
+    path('usuarios/<int:pk>/', UsuarioRetrieveUpdateDestroyView.as_view(), name='usuario-detail'),
 ]
 
