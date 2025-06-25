@@ -1,6 +1,16 @@
 from django.urls import path, include
 from django.contrib import admin
-from .views import AlunoListCreateView, AlunoRetrieveUpdateDestroyView, ProfessorListCreateView, ProfessorRetrieveUpdateDestroyView, TurmaListCreateView, TurmaRetrieveUpdateDestroyView
+from .views import (
+    AlunoListCreateView,
+    AlunoRetrieveUpdateDestroyView,
+    ProfessorListCreateView,
+    ProfessorRetrieveUpdateDestroyView,
+    TurmaListCreateView,
+    TurmaRetrieveUpdateDestroyView,
+    DisciplinaListCreateView,
+    DisciplinaRetrieveUpdateDestroyView
+)
+
 
 urlpatterns = [
     path('alunos/', AlunoListCreateView.as_view(), name='aluno-list-create'),
