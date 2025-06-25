@@ -31,3 +31,7 @@ class TurmaRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
 class DisciplinaListCreateView(generics.ListCreateAPIView):
     queryset = Disciplina.objects.all().order_by('nome')
     serializer_class = DisciplinaSerializer
+
+class DisciplinaRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Disciplina.objects.all().order_by('nome')
+    serializer_class = DisciplinaSerializer
