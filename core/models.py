@@ -65,3 +65,12 @@ class Frequencia(models.Model):
 
     def __str__(self):
         return f"{self.aluno.nome} - {self.status} em {self.data}"
+
+class CarrinhoMatricula(models.Model):
+    status = models.CharField(max_length=30)
+    data_criacao = models.DateField(auto_now_add=True)
+    ativo = models.BooleanField(default=True)
+    aluno = models.ForeignKey('Aluno', on_delete=models.CASCADE, related_name='carrinhos')
+
+    def __str__(self):
+        return f"Carrinho de {self.aluno.nome} - Status: {self.status}"
