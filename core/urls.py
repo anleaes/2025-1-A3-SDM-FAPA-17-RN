@@ -13,6 +13,8 @@ from .views import (
     NotaRetrieveUpdateDestroyView,
     FrequenciaListCreateView,
     FrequenciaRetrieveUpdateDestroyView,
+    CarrinhoMatriculaListCreateView,
+    CarrinhoMatriculaRetrieveUpdateDestroyView,
 )
 
 
@@ -31,5 +33,7 @@ urlpatterns = [
     path('notas/<int:pk>/', NotaRetrieveUpdateDestroyView.as_view(), name='nota-detail'),
     path('frequencias/', FrequenciaListCreateView.as_view(), name='frequencia-list-create'),
     path('frequencias/<int:pk>/', FrequenciaRetrieveUpdateDestroyView.as_view(), name='frequencia-detail'),
+    path('carrinhos/', CarrinhoMatriculaListCreateView.as_view(), name='carrinho-list-create'),
+    path('carrinhos/<int:pk>/', CarrinhoMatriculaRetrieveUpdateDestroyView.as_view(), name='carrinho-detail'),
 ]
 
