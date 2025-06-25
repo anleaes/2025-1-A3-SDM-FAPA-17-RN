@@ -21,5 +21,7 @@ urlpatterns = [
     path('professores/<int:pk>/', ProfessorRetrieveUpdateDestroyView.as_view(), name='professor-detail'),
     path('turmas/', TurmaListCreateView.as_view(), name='turma-list-create'),
     path('turmas/<int:pk>/', TurmaRetrieveUpdateDestroyView.as_view(), name='turma-detail'),
+    path('disciplinas/', DisciplinaListCreateView.as_view(), name='disciplina-list-create'),
+    path('disciplinas/<int:pk>/', DisciplinaRetrieveUpdateDestroyView.as_view(), name='disciplina-detail'),
 ]
 
