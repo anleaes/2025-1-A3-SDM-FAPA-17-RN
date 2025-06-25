@@ -54,3 +54,11 @@ class FrequenciaSerializer(serializers.ModelSerializer):
         fields = '__all__'
         read_only_fields = ('id',)
 
+
+class CarrinhoMatriculaSerializer(serializers.ModelSerializer):
+    aluno = serializers.StringRelatedField()
+
+    class Meta:
+        model = CarrinhoMatricula
+        fields = '__all__'
+        read_only_fields = ('id',)
