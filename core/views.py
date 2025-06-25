@@ -61,3 +61,7 @@ class NotaRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
 class FrequenciaListCreateView(generics.ListCreateAPIView):
     queryset = Frequencia.objects.all().order_by('data')
     serializer_class = FrequenciaSerializer
+
+class FrequenciaRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Frequencia.objects.all().order_by('data')
+    serializer_class = FrequenciaSerializer
