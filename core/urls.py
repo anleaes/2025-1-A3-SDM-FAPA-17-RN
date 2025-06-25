@@ -17,6 +17,8 @@ from .views import (
     CarrinhoMatriculaRetrieveUpdateDestroyView,
     PerfilListCreateView,
     PerfilRetrieveUpdateDestroyView,
+    UsuarioListCreateView,
+    UsuarioRetrieveUpdateDestroyView,
 )
 
 
