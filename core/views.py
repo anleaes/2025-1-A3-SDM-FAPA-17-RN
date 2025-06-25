@@ -77,3 +77,11 @@ class CarrinhoMatriculaListCreateView(generics.ListCreateAPIView):
 class CarrinhoMatriculaRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
     queryset = CarrinhoMatricula.objects.all().order_by('-data_criacao')
     serializer_class = CarrinhoMatriculaSerializer
+
+class PerfilListCreateView(generics.ListCreateAPIView):
+    queryset = Perfil.objects.all().order_by('nome')
+    serializer_class = PerfilSerializer
+
+class PerfilRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Perfil.objects.all().order_by('nome')
+    serializer_class = PerfilSerializer
