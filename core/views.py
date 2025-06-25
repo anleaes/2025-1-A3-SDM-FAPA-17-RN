@@ -1,5 +1,5 @@
 from rest_framework import generics
-from .models import Aluno, Professor, Turma
+from .models import Aluno, Professor, Turma, Disciplina
 from .serializers import AlunoSerializer, ProfessorSerializer, TurmaSerializer
 
 
