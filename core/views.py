@@ -1,6 +1,20 @@
 from rest_framework import generics
-from .models import Aluno, Professor, Turma, Disciplina, Nota
-from .serializers import AlunoSerializer, ProfessorSerializer, TurmaSerializer, DisciplinaSerializer, NotaSerializer
+from .models import (  
+    Aluno, 
+    Professor,
+    Turma,
+    Disciplina,
+    Frequencia,
+    Nota,
+)
+from .serializers import (
+    AlunoSerializer,
+    ProfessorSerializer,
+    TurmaSerializer,
+    DisciplinaSerializer,
+    NotaSerializer,
+    FrequenciaSerializer,
+)
 
 
 class AlunoListCreateView(generics.ListCreateAPIView):
@@ -43,3 +57,11 @@ class NotaListCreateView(generics.ListCreateAPIView):
 class NotaRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Nota.objects.all().order_by('data_lancamento')
     serializer_class = NotaSerializer
+
+class FrequenciaListCreateView(generics.ListCreateAPIView):
+    queryset = Frequencia.objects.all().order_by('data')
+    serializer_class = FrequenciaSerializer
+
+class FrequenciaRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Frequencia.objects.all().order_by('data')
+    serializer_class = FrequenciaSerializer
